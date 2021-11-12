@@ -1,0 +1,10 @@
+version: "3.3"
+services:
+  api:
+    build: ./api
+  server:
+    build: ./server
+    depends_on:
+      - api
+    ports:
+      - 80:80
